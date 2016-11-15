@@ -1,0 +1,51 @@
+(ns intolambda.register
+  (:require
+   [cljsjs.material]
+   [intolambda.footer :as f]
+   [intolambda.dom-utils :as dom]
+   [intolambda.form-utils :as fu]
+   [intolambda.data :as d]
+   [intolambda.http-utils :as h]))
+
+(defn validate-and-submit []
+  ;; TODO: implement me;
+  ;; 1. for each field:
+  ;;    1.1. apply the assigned validator retrieved by (:validator field) for each field
+  ;;    1.2. if invalid, show error message retrieved by (:err-msg field) and remain on page
+  ;; 2. if all are valid:
+  ;;    2.1. show "buy a ticket section -> link to eventbrite"
+  )
+
+(defn load-initial-challenge []
+  (let [callback (fn [response]
+                   (js/alert (str "OK " response))
+                   (let [display (.getElementById js/document "initial-ch")]
+                     (set! (.-innerHTML display) "dummy")))
+        error-handler (fn [{:keys [status status-text]}]
+                        (js/alert (str "ERR " status status-text)))]
+    (h/call-get
+     "http://www.icslab.eu/legal/codo-legal-terms.html"
+     callback
+     error-handler)))
+
+(defn main []
+  [dom/mdl
+   [:div.mdl-layout.mdl-js-layout
+    [:main.mdl-layout__content
+     [:div.page-content.divider-color
+      [:h3.mdl-color-text--primary "Registration will be opened soon!!"]
+                                        ;      [:p.mdl-color-text--primary {:id "initial-ch"} ""]
+      ;; [fu/build-form
+      ;;  "register"
+      ;;  d/registration-form-fields
+      ;;  load-initial-challenge
+      ;;  "I agree with the terms and conditions."]
+      ;;                                   ;(f/footer-component)
+      ]]
+    ]])
+
+(defn init []
+  (dom/render-main main "register"))
+
+(defn reload []
+  (dom/render-main main "register"))

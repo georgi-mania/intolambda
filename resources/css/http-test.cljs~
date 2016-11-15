@@ -1,0 +1,32 @@
+;;https://github.com/JulianBirch/cljs-ajax
+;; [cljs-ajax "0.5.8"]  -> de adaugat in build.boot ca dependinta
+
+(ns intolambda.http-utils
+  (:require [ajax.core :refer [GET POST]]))
+
+(defn- cljs->json [data]
+  (.stringify js/JSON (clj->js data)))
+
+(defn call-get [url handler-fn error-handler-fn]
+  (GET url
+       {:handler handler-fn
+        :error-handler error-handler-fn
+        :with-credentials false}))
+
+(defn call-post [url message-map handler-fn error-handler-fn]
+  (POST url
+        {:params {:message (cljs->json message-map)}
+         :handler handler-fn
+         :error-handler error-handler-fn
+         :format :json}))
+
+(defn load-initial-challenge [link]
+  (let [callback (fn [response]
+                   (js/alert (str "OK " response))
+        error-handler (fn [{:keys [status status-text]}]
+                        (js/alert (str "ERR " status status-text)))]
+    (http/call-get link callback error-handler)))
+
+(load-initial-challenge "http://www.icslab.eu")
+
+

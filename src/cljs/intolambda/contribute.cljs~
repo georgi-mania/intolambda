@@ -1,0 +1,33 @@
+(ns intolambda.contribute
+  (:require
+   [cljsjs.material]
+   [intolambda.dom-utils :as dom]
+   [intolambda.footer :as f]
+   [intolambda.form-utils :as fu]
+   [intolambda.data :as d]))
+
+(def contribute-text "Would you like to contribute?")
+
+(defn contribution-component []
+  [:div
+   [:h3.mdl-color-text--primary "Let's get in touch!"]
+   [:div.content-grid.mdl-grid
+    [:div.mdl-cell.mdl-cell--middle.mdl-cell--2-col
+     (fu/build-checkbox "volunteer" "volunteer" nil)]
+    [:div.mdl-cell.mdl-cell--middle.mdl-cell--2-col
+     (fu/build-checkbox "partner" "partner" nil)]
+    [:div.mdl-cell.mdl-cell--middle.mdl-cell--2-col
+     (fu/build-checkbox "sponsor" "sponsor" nil)]]
+   [fu/build-form "Contributor' data" d/contribution-form-fields  nil nil]])
+
+(defn main []
+  [dom/mdl
+   [:div.mdl-layout.mdl-js-layout
+    [:main.mdl-layout__content
+     [:div.page-content.divider-color
+      [contribution-component]
+      (f/footer-component)
+      ]]]])
+
+(defn init []
+  (dom/render-main main "contribute"))

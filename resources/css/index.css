@@ -1,0 +1,244 @@
+html {
+    overflow: scroll;
+    overflow-y: hidden;
+    font-family: 'Gloria Hallelujah', cursive;
+  /*  background: url("/images/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+
+
+body {
+    min-height: 100%;
+   /* background-color: grey; */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+.full-screen {
+    background-image: url('../images/logo.png');
+    background-size: cover;
+    background-position: center top;
+    height: 100vh; 
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.intolambda-layout-transparent {
+    background-image: url('..images/transparent.png');
+    background-size: center / cover;
+}
+
+/*
+.intolambda-layout-transparent .mdl-layout__header {
+    color: white;
+}
+
+
+.intolambda-layout-transparent .mdl-layout__drawer-button {
+    color: black;
+}
+*/
+.intolambda-drawer .mdl-menu .mdl-menu__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+          -ms-flex-align:center;
+             align-items:center;
+}
+
+.intolambda .intolambda-nav .mdl-navigation__link {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+
+    -webkit-flex-direction: row;
+         -ms-flex-direction:row;
+             flex-direction:row;
+
+    -webkit-align-items: center;
+         -ms-flex-align: center;
+            align-items: center;
+}
+
+.center-component {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: center;
+         -ms-flex-align:center;
+         align-items:center;
+
+    margin: 0 auto;
+    position: relative;
+}
+
+.intolambda-center-align {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: center;
+         -ms-flex-align: center;
+            align-items: center;
+
+    margin: 0 auto;
+    width: 100%; 
+    position: relative;
+}
+
+h1,h2,h3,h4,h5 {
+    text-align: center;
+}
+
+p {
+    font-weight: normal;
+ /*   color: white; */
+}
+
+.speakers-table {
+    display: inline-block;
+    margin-left: 15px;
+    /*border: 1px solid black;*/
+}
+
+.avatar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: center;
+    -ms-flex-align:center;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 25%;
+    position: relative;
+}
+
+.sponsor-img {
+    width: 100px;
+    height: 100px;
+}
+
+.code {
+    font-family: "monospace"
+}
+
+.thick {
+    font-weight: bold;
+}
+
+.mdl-layout__obfuscator.is-visible{
+    background-color: transparent;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.floating-menu {
+    z-index: 100;
+    position: fixed;
+    top: 100px;
+    right: 0px;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+}
+
+.with-whitespace {
+    padding-left: 10px;
+}
+
+.with-whitespacex2 {
+    padding-left: 20px;
+}
+
+/* @media screen and {max-width: 450px} { */
+/*     .mdl-layout__header-row { */
+/*         position: fixed; */
+/*         margin-top: 50px; */
+/*         padding: 50 50 50 50; */
+/*         color: "red"; */
+/*         background-color: "white"; */
+/*     } */
+/*     #drawer { */
+/*         position: fixed; */
+/*         margin-top: 50px; */
+/*         padding: 50 50 50 50; */
+/*         color: "red"; */
+/*         background-color: "white"; */
+/*     } */
+/* } */
+
+@media only handheld {
+    div.mdl-layout__drawer-button {
+        color: white;
+        vertical-align: middle;
+        overflow-style: visible;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.mdl-layout__drawer-button {
+        color: white;
+        vertical-align: middle;
+        overflow-style: visible;
+        position: relative;
+    }
+}
+
+.mdl-mini-footer__link-list a:link {
+    text-decoration: underline;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+}
+
+.link-like {
+    text-decoration: underline;
+    border: 0px;
+    cursor: pointer;
+}

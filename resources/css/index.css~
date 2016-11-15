@@ -1,0 +1,119 @@
+html {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+body {
+    min-height: 100%;
+    background-color: grey;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+.full-screen {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    height: 100vh; 
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.intolambda-layout-transparent {
+    background-image: url('..images/transparent.png');
+    background-size: center / cover;
+}
+
+.intolambda-layout-transparent .mdl-layout__header {
+    color: white;
+}
+
+.intolambda-layout-transparent .mdl-layout__drawer-button {
+    color: black;
+}
+
+.intolambda-drawer .mdl-menu .mdl-menu__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+          -ms-flex-align:center;
+             align-items:center;
+}
+
+.intolambda .intolambda-nav .mdl-navigation__link {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+
+    -webkit-flex-direction: row;
+         -ms-flex-direction:row;
+             flex-direction:row;
+
+    -webkit-align-items: center;
+         -ms-flex-align: center;
+            align-items: center;
+}
+
+.intolambda-center-align {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: center;
+         -ms-flex-align: center;
+            align-items: center;
+
+    margin: 0 auto;
+    width: 25%; 
+    position: relative;
+}
+
+h3,h4 {
+    text-align: center;
+}
+
+p {
+    font-weight: normal;
+    color: white;
+}
+
+table {
+    display: inline-block;
+}
+
+.avatar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: center;
+    -ms-flex-align:center;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 50%;
+    position: relative;g
+}
+
+.code {
+    font-family: "monospace"
+}
+
+.thick {
+    font-weight: bold;
+}
+
+.thick-yellow {
+    font-weight: bold;
+    color: yellow;
+}
+
+.normal-purple {
+    color: purple;
+}
+                   

@@ -1,0 +1,58 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src *; connect-src *; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- imports used by Material Design Lite API -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah"/>
+
+    <!--<link href='http://fonts.which is googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="//code.getmdl.io/1.2.1/material.blue_grey-amber.min.css" />
+   <script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/palette.css">
+   <link rel="stylesheet" type="text/css" href="css/socials.css">
+   <!-- end imports used bt Material Design Lite API" -->
+
+   <!-- font-awesome library for social sharing icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <meta name="description" content="Icslab's Hackathon website">
+    <title>into lambda hackathon</title>
+
+
+    <!-- facebook share params -->
+    <meta property="og:site_name" content="into lambda">
+    <meta property="og:title" content="(list into lambda hackathon)">
+    <meta property="og:url" content="intolambda.icslab.eu">
+    <meta property="og:image" content="/images/logo.png">
+    <meta property="og:description" content="First Clojure Hackathon in Romania">
+
+  </head>
+  <body>
+
+    <!-- facebook sdk call -->
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+
+    <div id="app"></div>
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
