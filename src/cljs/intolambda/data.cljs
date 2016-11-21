@@ -4,14 +4,26 @@
 
 (def speaker-list
   "List of all speakers and their details. :avatar is the name of the speaker's picture saved in /images/speakers/ folder. E.g. joedoe for /images/speakers/joedoe.png."
-  [{:name "Alexandru Gherega"
+  [{:niste-date-dummy :in-interior} ;; spacer
+   {:name "Alexandru Gherega"
     :desc "Clojure enthusiast"
-    :avatar "0a53-alex-gherega_424242.jpg"}])
+    :avatar "0a53-alex-gherega_424242.jpg"
+    :link "http://www.icslab.eu"}
+   {:name "Speaker"
+    :desc "Join as speaker"
+    :avatar "joedoe-f.png"
+    :link "#contributors"};spacer
+   ])
 
 (def sponsor-list
   "List of all sponsors and their details. :avatar is the name of the sponsor's brand image / logo saved in /images/sponsors/ folder. "
-  [{:name "s1" :avatar "logo-1-fb.png"
-    :link "http://www.icslab.eu"}])
+  [{:ndd :in-interior}
+   {:name "s1" :id "icslab" :avatar "logo-1-fb.png"
+    :link "http://www.icslab.eu"
+    :tooltip "icslab.eu"}
+   {:name "s2" :id "new-sponsor" :avatar "joedoe-d.png"
+    :link "#contributors"
+    :tooltip "Become a sponsor!"}])
 
 ;; "[A-Za-z0-9]+@{1,}[A-Za-z0-9]+"
 

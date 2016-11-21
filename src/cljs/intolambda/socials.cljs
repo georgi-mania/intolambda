@@ -6,15 +6,16 @@
 
 (defn- facebook-button [link]
   [:div.square
-   [:a.mdl-button.mdl-js-button.mdl-button--facebook.mdl-button--raised.mdl-js-ripple-effect.mdl-button--icon
+   [:a.mdl-button.mdl-js-button.mdl-button--facebook.mdl-button--raised.mdl-js-ripple-effect.mdl-button--icon.innactive.mdl-button--disabled
     {:href link
      :target "_blank"
-     :title "Share event on Facebook"}
+     :title "Share event on Facebook"
+     :disabled true}
     [:i.fa.fa-facebook.fa-fw]]])
 
 (defn- twitter-button [link]
   [:div.square
-   [:a.mdl-button.mdl-js-button.mdl-button--twitter.mdl-button--raised.mdl-js-ripple-effect.mdl-button--icon
+   [:a.mdl-button.mdl-js-button.mdl-button--twitter.mdl-button--raised.mdl-js-ripple-effect.mdl-button--icon.innactive.mdl-button--disabled
     {:href link
      :title "Twit event"
      :target "_blank"}
@@ -22,7 +23,7 @@
 
 (defn- linkedin-button [link data]
   [:div.square
-   [:button.mdl-button.mdl-js-button.mdl-button--linkedin.mdl-button--raised.mdl-js-ripple-effect.mdl-button--icon
+   [:button.mdl-button.mdl-js-button.mdl-button--linkedin.mdl-button--raised.mdl-js-ripple-effect.mdl-button--icon.innactive.mdl-button--disabled
     {;:href "http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary="
      :on-click #(http/call-post link data nil nil)
      :target "_blank"

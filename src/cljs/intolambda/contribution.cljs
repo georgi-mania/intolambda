@@ -2,7 +2,7 @@
   (:require
    [cljsjs.material]
    [reagent.core :refer [atom]]
-   [intolambda.utils :refer [load-element display-grid build-contributor-box]]
+   [intolambda.utils :refer [load-element display-grid build-contributor-box show-element]]
    [intolambda.form-utils :refer [build-form-for-email]]))
 
 (defonce selections (atom {}))
@@ -37,7 +37,7 @@
 (defn- clear-selections []
   (reset! selections {}))
 
-(defn contribution-component [roles contributors]
+(defn contribution-component [roles contributors close-fn]
   (let [form-params {:action "http://formspree.io/icslabcrew@gmail.com"
                      :method "POST"
                      :on-submit #(clear-selections)}]
@@ -46,4 +46,4 @@
       "contribute"
       roles
       #(build-contributor-box % toggle-checkbox))
-     [build-form-for-email form-params contributors nil]]))
+     [build-form-for-email form-params contributors nil close-fn]]))

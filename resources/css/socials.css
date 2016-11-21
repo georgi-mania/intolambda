@@ -252,3 +252,14 @@
 .mdl-button--fab.mdl-button--linkedin .mdl-ripple {
   background: white;
 }
+
+.innactive {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.8;
+}
+
+.mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
+    background-color: rgba(21,21,21,0.50);
+    color: rgba(255,255,255,0.8);               
+}

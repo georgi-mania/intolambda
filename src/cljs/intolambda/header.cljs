@@ -33,7 +33,7 @@
                      :key (hash name)}]
     (conj (layout-fn selected?) parsed-link name)))
 
-(defn- close-drawer []
+(defn close-drawer []
   (let [drawer (load-element "drawer")]
     (set! (.-className drawer) "mdl-layout__drawer dark-primary-color")))
 
@@ -44,7 +44,7 @@
 (defn header-component [crt-state]
   @reload-atom
   [:header.mdl-layout__header.mdl-layout__header.dark-primary-color
-   {:id "header"}
+   {:id "header" :on-click close-drawer}
    [:div.mdl-layout__header-row.dark-primary-color
     [:div.mdl-layout-spacer]
     (navigation-component menu crt-state)]])

@@ -85,10 +85,10 @@
         checkbox
         (build-submit-button "submit" submit-button-id submit-fn true)]]]]))
 
-(defn build-form-for-email [form-params input-data submit-fn]
+(defn build-form-for-email [form-params input-data submit-fn close-fn]
   [:div.page-content.center-component
    [:div.content-grid.mdl-grid.mdl-js-grid
-    [:div.mdl-cell.mdl-cell--2-col
+    [:div.mdl-cell.mdl-cell--2-col..mdl-cell--2-col-tablet.mdl-cell--1-col-phone
      [:form
       form-params
       (map #(build-field %) input-data)
@@ -96,4 +96,6 @@
       (email-next "index.html")
       (email-reply-to "icslabcrew@gmail.com")
       (extra-info)
-      (build-submit-button "submit" "submit-id" submit-fn false)]]]])
+      (build-submit-button "submit" "submit-id" submit-fn false)]]
+    [:div.mdl-cell.mdl-cell--8-col.mdl-cell--5-col-tablet.mdl-cell--2-col-phone]
+    [:div.mdl-cell.mdl-cell--2-col.mdl-cell--1-col-tablet.mdl-cell--1-col-phone.mdl-cell--bottom [:a.mdl-color-text--teal.link-like {:on-click close-fn} "hide"]]]])

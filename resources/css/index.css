@@ -25,7 +25,7 @@ body {
     background-image: url('../images/logo.png');
     background-size: cover;
     background-position: center top;
-    height: 100vh; 
+    height: 100vh;
     min-height: 100%;
     min-width: 100%;
 }
@@ -241,4 +241,41 @@ p {
     text-decoration: underline;
     border: 0px;
     cursor: pointer;
+}
+
+/* @viewport { */
+/*     initial-scale: 1.0; */
+/*     width: device-width; */
+/*     min-zoom: 0.85; */
+/*     max-zoom: 1.2; */
+/* } */
+
+.zoom {
+    zoom: 20%;
+}
+
+disabled {
+    background: white;
+    
+}
+
+li {
+    vertical-align: middle;
+    padding: 50 50 50 50;
+}
+
+.mdl-mini-footer__link-list.with-padding {
+    padding: 5px 0px 5px 0px;
+}
+
+.with-ear-muffs {
+    display: block;
+    line-height: 26px;
+}
+
+.with-ear-muffs:before {
+    content: '*';
+    line-height: 26px;
+    display: inline-block;
+    vertical-align: middle;
 }

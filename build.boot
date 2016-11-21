@@ -11,7 +11,8 @@
                  [reagent "0.6.0"]
                  [cljsjs/material "1.2.1-0"]
                  [org.clojure/clojurescript "1.7.228"]
-                 [cljs-ajax "0.5.8"]])
+                 [cljs-ajax "0.5.8"]
+                 [hiccups "0.3.0"]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]

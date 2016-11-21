@@ -8,8 +8,8 @@
 
    [:div.mdl-cell.md-cell--4-col.md-cell--2-col-tablet.md-cell--2-col-phone
     [:h5.mdl-color-text--accent (icon-text-line "info_outline" "about")]
-    (icon-text-line "event" "to be announced!")
-    (icon-text-line "place" "to be announced!")
+    (icon-text-line "event" "to be announced" "with-ear-muffs")
+    (icon-text-line "place" "to be announced" "with-ear-muffs")
     ;(icon-link "assignment" "terms and conditions" "terms.html")
     ]
 

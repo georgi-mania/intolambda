@@ -3,7 +3,10 @@
    [cljsjs.material]
    [intolambda.registration :refer [register]]
    [intolambda.contribution :refer [contribution-component]]
-   [intolambda.utils :refer [build-speaker-box build-sponsor-box display-grid]]))
+   [intolambda.utils :refer [build-speaker-box
+                             build-sponsor-box
+                             display-grid
+                             show-element]]))
 
 (defn home []
   [:section.full-screen
@@ -49,4 +52,4 @@
   [:section
    {:id "contributors"
     :hidden true}
-   (contribution-component roles contributors)])
+  (contribution-component roles contributors #(show-element "contributors" true))])

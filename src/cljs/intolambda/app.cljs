@@ -49,6 +49,7 @@
     (h/header-component app-state)
     (h/drawer-component app-state)
     [:main.mdl-layout__content
+     {:on-click h/close-drawer}
      [:div.page-content.mdl-color--white
       [s/home]
       (soc/social-menu)
