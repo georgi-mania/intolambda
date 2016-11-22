@@ -50,7 +50,7 @@
    [:div
     [:span.thick "defn"]
     [:span " is a macro that allows us to easily define a function. The syntax is:"]
-    [:p.with-whitespace "(defn fn-name arg-list fn-comment fn-body)"]]
+    [:p.with-whitespace "(defn fn-name arg-vector fn-comment fn-body)"]]
    [:div
     [:span.thick "->>"]
     [:span " is a threading macro that inserts x as the last item in the first form and then inserts the first form as last argument in the next form. The syntax is:"]
