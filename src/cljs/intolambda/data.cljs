@@ -2,6 +2,9 @@
 
 (def opened-registration? false)
 
+;;TODO: define ids and remove hardcoded values
+;;(def sections {:home {:id "home"}})
+
 (def speaker-list
   "List of all speakers and their details. :avatar is the name of the speaker's picture saved in /images/speakers/ folder. E.g. joedoe for /images/speakers/joedoe.png."
   [{:niste-date-dummy :in-interior} ;; spacer
@@ -50,7 +53,7 @@
 ;; email? "[A-Za-z0-9_]+@{1,}([A-Za-z0-9] +\\. {1,} [A-Za-z]+)+"
 
 (def contribution-roles
-  ["volunteer" "expert" "sponsor" "partner"])
+  ["volunteer" "speaker" "sponsor" "partner"])
 
 (def contribution-form-fields
   [{:field-name "name"

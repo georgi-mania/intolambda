@@ -2,7 +2,7 @@
   (:require
    [cljsjs.material]
    [intolambda.registration :refer [register]]
-   [intolambda.contribution :refer [contribution-component]]
+   [intolambda.contribution :refer [contribution-component clear-selections]]
    [intolambda.utils :refer [build-speaker-box
                              build-sponsor-box
                              display-grid
@@ -52,4 +52,9 @@
   [:section
    {:id "contributors"
     :hidden true}
-  (contribution-component roles contributors #(show-element "contributors" true))])
+   (contribution-component
+    roles
+    contributors
+    #(do
+       (show-element "contributors" true)
+       (clear-selections roles)))])

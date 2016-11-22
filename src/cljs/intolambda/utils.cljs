@@ -6,6 +6,34 @@
    [hiccups.core :refer [html]]))
 
 (declare navigate)
+(declare nav-and-hack)
+
+(defn load-element [id]
+  (.getElementById js/document id))
+
+(defn show-element
+  ([id] (show-element id false))
+  ([id val]
+   (let [element (load-element id)]
+     (set! (.-hidden element) val))))
+
+(defn- is-checked [id]
+  (.-checked (load-element id)))
+
+(defn set-checkbox-flag [id flag]
+  (let [element (load-element id)
+        was-checked (.-checked element)]
+    (if-not (= flag was-checked)
+      (.click element))))
+
+(defn check-checkbox [id]
+  (let [element (load-element id)
+        was-checked (.-checked element)]
+    (if-not was-checked (.click element))
+    ;; (set! (.-checked element) true)
+    ;; (and element (set! (.-checked element) true))
+    ))
+
 (defn- is-link? [text]
   (if text
     (or
@@ -71,7 +99,9 @@
 (defn build-speaker-box [speaker]
   [:div.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone
    {:key (hash-coll speaker)
-    :on-click (-> speaker :link navigate)
+    :on-click (nav-and-hack (:link speaker)
+                            "speaker"
+                            check-checkbox)
     :style {:cursor "pointer"}}
    [:img.avatar
     (and (:avatar speaker)
@@ -85,7 +115,9 @@
 (defn build-sponsor-box [sponsor]
   [:div.mdl-cell.mdl-cell--3-col.mdl-cell--3-col-tablet.mdl-cell--4-col-phone
    {:key (hash-coll sponsor)
-    :on-click (-> sponsor :link navigate)
+    :on-click (nav-and-hack (:link sponsor)
+                            "sponsor"
+                            check-checkbox)
     :style {:cursor "pointer"}}
    [:img.avatar
     (and (:avatar sponsor)
@@ -105,16 +137,6 @@
    [:div.content-grid.mdl-grid.center-component.mdl-color-text--primary
     (map #(f %) item-list)]])
 
-(defn load-element [id]
-  (.getElementById js/document id))
-
-(defn show-element
-  ([id] (show-element id false))
-
-  ([id val]
-   (let [element (load-element id)]
-     (set! (.-hidden element) val))))
-
 (defn navigate [nav-link]
   (let [section-fn #(do
                       (show-element (replace nav-link #"#" ""))
@@ -122,3 +144,7 @@
         link-fn #(set! (.-location js/document) nav-link)]
     (cond (is-link? nav-link) link-fn
           (is-section? nav-link) section-fn)))
+
+(defn nav-and-hack [nav-link id f]
+  #(do ((navigate nav-link))
+       (f id)))
