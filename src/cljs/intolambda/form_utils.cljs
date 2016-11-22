@@ -93,7 +93,7 @@
       form-params
       (map #(build-field %) input-data)
       (email-subject "New contributor!!")
-      (email-next "index.html")
+      (email-next "http://www.icslab.eu/intolambda/index.html")
       (email-reply-to "icslabcrew@gmail.com")
       (extra-info)
       (build-submit-button "submit" "submit-id" submit-fn false)]]
