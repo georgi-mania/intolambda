@@ -21,13 +21,33 @@ body {
     background: transparent;
 }
 
-.full-screen {
-    background-image: url('../images/logo.png');
+/* .full-screen { */
+/*     background-image: url('../images/into-lambda-banner.png'); */
+/*     background-size: cover; */
+/*     background-position: center top; */
+/*     height: 100vh; */
+/*     min-height: 100%; */
+/*     min-width: 100%; */
+/* } */
+
+#bg {
+    background: url('../images/into-lambda-banner.png');
     background-size: cover;
     background-position: center top;
     height: 100vh;
     min-height: 100%;
     min-width: 100%;
+}
+
+@media only screen and (max-device-width: 490px) {
+    #bg {
+        background: url('../images/into-lambda-banner-mobile.png');
+        background-size: cover;
+        background-position: center top;
+        height: 100vh;
+        min-height: 100%;
+        min-width: 100%;
+    }
 }
 
 .intolambda-layout-transparent {

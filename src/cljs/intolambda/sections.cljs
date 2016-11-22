@@ -9,9 +9,9 @@
                              show-element]]))
 
 (defn home []
-  [:section.full-screen
+  [:section
    {:id "home"}
-   [:div.page-content.intolambda-center-align]])
+   [:div.page-content.intolambda-center-align {:id "bg"}]])
 
 (defn the-challenge []
   [:section

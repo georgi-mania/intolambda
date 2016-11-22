@@ -105,7 +105,7 @@
     :style {:cursor "pointer"}}
    [:img.avatar
     (and (:avatar speaker)
-         {:src (str "/images/speakers/" (:avatar speaker))
+         {:src (str "images/speakers/" (:avatar speaker))
           :style {:border-radius "50%"}})]
    [:h4.mdl-color-text--secondary (:name speaker)]
    [:div
@@ -121,7 +121,7 @@
     :style {:cursor "pointer"}}
    [:img.avatar
     (and (:avatar sponsor)
-         {:src (str "/images/sponsors/" (:avatar sponsor))})]])
+         {:src (str "images/sponsors/" (:avatar sponsor))})]])
 
 (defn build-contributor-box [contributor cont-fn]
   [:div.mdl-cell.mdl-cell--middle.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
