@@ -10,7 +10,11 @@ This is a single-page site implemented in [ClojureScript](https://github.com/clo
 * [Georgiana Mania](https://github.com/georgi-mania)
 
 
-### Disclaimer
+#### Disclaimer
 
-The website uses original images which are property of [Alex Gherega](https://github.com/alex-gherega).   
+The website uses original images which are property of [Alex Gherega](https://github.com/alex-gherega).
+
+## License
+
+Copyright © 2016 [icslab.eu](http://www.icslab.eu)
 
