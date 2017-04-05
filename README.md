@@ -7,7 +7,10 @@ This is a single-page site implemented in [ClojureScript](https://github.com/clo
 ## Contributors
 
 * [Alex Gherega](https://github.com/alex-gherega)
-* Georgiana Mania
+* [Georgiana Mania](https://github.com/georgi-mania)
 
 
+### Disclaimer
+
+The website uses original images which are property of [Alex Gherega](https://github.com/alex-gherega).   
 
